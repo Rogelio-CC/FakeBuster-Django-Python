@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeBuster</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesResultados.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="{% static 'fakebuster.png' %}" alt="Logo" class="navbar-logo">
+    </nav>
+    <br>
+    <main>
+        <div class="contenedorTodo">
+            <div class="contenedor1">
+                <p class="resultado1" id="resultado">RESULTADOS</p>
+            </div>
+            <div class="contenedor2">
+                <p class="resultado" id="informacionDelTitulo">Esto se encontro del titulo: {{ valorTitulo }}</p>
+                <p class="resultado" id="informacionDelAutor">Esto se encontro del autor: {{ valorAutor }}</p>
+                <p class="resultado" id="informacionDelaFecha">Esto se encontro de la fecha: {{ valorFecha }}</p>      
+            </div>
+            <button type="submit" value="Volver" class="enviar" href="{% url 'FakeBuster:mostrar_valor' %}">Volver</button>
+        </div>
+    </main>
+    <script>
+        const boton = document.querySelector("button");
+
+        boton.addEventListener("click", () => {
+        location.href = "/fakebuster";
+        });
+    </script>
+</body>
+</html>

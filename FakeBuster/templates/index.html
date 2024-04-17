@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeBuster</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+<body>
+    <nav class="navbar">
+        <img src="{% static 'fakebuster.png' %}" alt="Logo" class="navbar-logo">
+    </nav>
+    <br>
+    <main>
+        <div class="contenedorTodo">
+            <div class="contenedor">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="form_id" value="formularioID">
+                    <label class="texto">Introduce la url de la noticia</label>
+                    <br> 
+                    <input type="text" name="url" class="noticia" id="url">
+                    <br>
+                    <input type="submit" value="Buscar" class="enviar"/>
+                </form>
+            </div>
+            <div class="contenedor">
+                <form method="post" id="formularioManual">
+                    {% csrf_token %}
+                    <label class="texto">Introduce el titulo de la noticia</label>
+                    <br> 
+                    <input type="text" name="titulo" class="noticia" id="titulo" value="{{ titulo }}">
+                    <br>
+    
+                    <label class="texto">Introduce el autor de la noticia</label> 
+                    <br> 
+                    <input type="text" name="autor" class="noticia" id="autor" value="{{ autor }}">
+                    <br>
+    
+                    <label class="texto">Introduce la fecha de creación de la noticia</label> 
+                    <br> 
+                    <input type="date" name="fecha" class="noticia" id="fecha" value="{{ fecha }}">
+                    <br>
+                    <input type="submit" value="¿Es falso?" class="enviar"/>
+                </form>            
+            </div>
+        </div>
+    </main>
+</body>
+</html>

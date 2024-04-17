@@ -1,0 +1,114 @@
+body{
+    background-color: #a33534;
+    /*background-image: url('pexels-johannes-plenio-1103970.jpg');*/
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajusta la altura según tus necesidades */
+    width: auto;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #040404; /* Ajusta el color de fondo según tus preferencias */
+}
+
+.navbar-logo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 80px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.contenedorTodo{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 3vh;
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: -18px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center;
+    border: 3px solid;
+    border-color: #281a1a;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.texto{
+    font-size: 25px;
+    font-family: 'HelveticaNeueLTStd', Arial, serif;
+    color: #232323; 
+}
+
+.noticia{
+    margin-bottom: 40px;
+    height: 30px;
+    width: 500px;
+    font-size: large;
+}
+
+
+.enviar{
+    width: 200px;
+    height: 50px;
+    background-color: #b70902;
+    border-radius: 30px;
+    font-family: 'HelveticaNeueLTStd', Arial, serif;
+    color: white;
+}
+
+
+.resultado{
+    text-align: justify;
+    margin-top: 40px;
+    color: #232323;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd';
+    src: url("{% static 'FakeBuster/static/Helvetica Neue LT Std 65 Medium.otf' %}") format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        width: 75%;
+    }
+
+    .titulo{
+        font-size: 60px;
+    }
+    
+    .texto {
+        font-size: 15px;
+    }
+
+    .resultado {
+        font-size: 15px;
+    }
+
+    .noticia, .noticia2 {
+        width: 90%;
+        max-width: 300px; /* Ajusta el ancho de los campos de entrada */
+    }
+
+    .enviar {
+        width: 150px;
+        height: 40px;
+    }
+}
