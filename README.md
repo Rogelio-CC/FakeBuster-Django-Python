@@ -1,6 +1,7 @@
 ## FakeBuster
 Website made with the Django framework, Python programming language, HTML and Bootstrap.
-### Project collaborators
+
+## Project collaborators
 <li>@danielisaisal</li>
 <li>@memotas98</li>
 <li>@OzielLM</li>
