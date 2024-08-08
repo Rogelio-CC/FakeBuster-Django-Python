@@ -1,5 +1,6 @@
-## Página web hecha con el framework Django, lenguaje de programación Python, HTML y Bootstrap. 
-### Colaboradores del proyecto
+## FakeBuster
+Website made with the Django framework, Python programming language, HTML and Bootstrap.
+### Project collaborators
 <li>@danielisaisal</li>
 <li>@memotas98</li>
 <li>@OzielLM</li>
